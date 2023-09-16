@@ -1,0 +1,32 @@
+.header {
+  background-color: #ffe600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+  border-radius: 2px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 60vw;
+  border: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 2px 0 0 2px;
+}
+
+.search-button {
+  background-color: #eeeeee;
+  border: none;
+  padding: 10px;
+  border-radius: 0 2px 2px 0;
+  line-height: 0;
+  height: 41px;
+  cursor: pointer;
+}
