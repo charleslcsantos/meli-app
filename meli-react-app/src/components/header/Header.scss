@@ -1,5 +1,7 @@
+@import "../../scss/variables.scss";
+
 .header {
-  background-color: #ffe600;
+  background-color: $primary_color;
   padding: 10px 0;
   border-radius: 2px;
 
@@ -25,7 +27,7 @@
 }
 
 .search-button {
-  background-color: #eeeeee;
+  background-color: $gray4_color;
   border: none;
   padding: 10px;
   border-radius: 0 2px 2px 0;

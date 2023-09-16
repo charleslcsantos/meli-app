@@ -12,7 +12,9 @@ export default class Breadcrumb extends Component<BreadcrumbProps> {
         <ol className="breadcrumb">
           {this.props.categories &&
             this.props.categories.map((breadcrumb) => (
-              <li className="breadcrumb__item">{breadcrumb}</li>
+              <li className="breadcrumb__item" key={breadcrumb}>
+                {breadcrumb}
+              </li>
             ))}
         </ol>
       </div>

@@ -16,12 +16,15 @@ $container-max-widths: (
 @import "bootstrap/scss/utilities";
 
 @import "bootstrap/scss/containers";
+@import "bootstrap/scss/buttons";
+
+@import "./scss/variables.scss";
 
 :root {
   font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif,
     sans-serif;
 
-  background-color: #eeeeee;
+  background-color: $gray4_color;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

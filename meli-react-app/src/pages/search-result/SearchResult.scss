@@ -1,0 +1,16 @@
+@import "../../scss/variables.scss";
+
+.result {
+  background-color: $default_white_color;
+  border-radius: 4px;
+  padding: 16px;
+
+  a {
+    border-bottom: 1px solid $gray4_color;
+    padding: 16px 0;
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+}

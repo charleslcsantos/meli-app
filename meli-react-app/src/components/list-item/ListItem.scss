@@ -1,0 +1,43 @@
+@import "../../scss/variables.scss";
+
+.list-item {
+  display: flex;
+  text-decoration: none;
+
+  &__details {
+    flex-grow: 1;
+    padding-top: 16px;
+  }
+
+  &__preview {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    object-fit: contain;
+    margin-right: 16px;
+  }
+
+  &__price {
+    font-size: 24px;
+    padding-bottom: 14px;
+    color: $gray1_color;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: normal;
+    color: $gray2_color;
+  }
+
+  &__location {
+    font-size: 12px;
+    padding-top: 24px;
+    padding-left: 16px;
+    width: 150px;
+    color: $gray2_color;
+  }
+}
+
+.icon-shipping {
+  margin-left: 10px;
+}
