@@ -1,0 +1,58 @@
+@import "../../scss/variables.scss";
+
+.item {
+  background-color: $default_white_color;
+  border-radius: 4px;
+  padding: 32px;
+
+  &__headline {
+    display: flex;
+  }
+
+  &__details {
+    padding: 0 24px;
+  }
+
+  &__cover {
+    max-width: 680px;
+    width: 100%;
+  }
+
+  &__status {
+    margin-bottom: 16px;
+    display: block;
+    font-size: 14px;
+  }
+
+  &__title {
+    font-size: 24px;
+    max-width: 70%;
+    margin-bottom: 32px;
+  }
+
+  &__price {
+    display: block;
+    font-size: 46px;
+    margin-bottom: 32px;
+  }
+
+  &__buy {
+    background-color: $blue_color;
+    color: $default_white_color;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  &__description {
+    h2 {
+      font-size: 28px;
+      margin-bottom: 32px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+  }
+}
