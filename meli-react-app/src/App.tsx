@@ -12,7 +12,13 @@ function App() {
     <>
       <Header />
       <Breadcrumb
-        categories={["Eletronica, Audio y Video", "Ipod", "Reproductores"]}
+        categories={[
+          "Eletronica, Audio y Video",
+          "iPod",
+          "Reproductores",
+          "iPod touch",
+          "32GB",
+        ]}
       />
     </>
   );

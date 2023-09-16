@@ -1,8 +1,27 @@
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 860px,
+  xl: 1040px,
+  xxl: 1220px,
+);
+
+// scss-docs-start import-stack
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+@import "bootstrap/scss/containers";
+
 :root {
   font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif,
     sans-serif;
 
-  background-color: #999999;
+  background-color: #eeeeee;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

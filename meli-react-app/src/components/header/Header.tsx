@@ -9,28 +9,32 @@ export default class Header extends Component {
   render() {
     return (
       <header className="header">
-        <img
-          src={meliLogo}
-          alt="Mercado Livre Brasil - Onde comprar e vender de Tudo"
-          className="logo"
-          srcSet={`${meliLogo2x} 2x`}
-        />
-        <form className="search-box">
-          <input
-            type="text"
-            name="keyword"
-            className="search-input"
-            aria-label="Digite o que você quer encontrar"
-            placeholder="Nunca dejes de buscar"
-          />
-          <button type="submit" className="search-button">
+        <div className="container">
+          <div className="header__content">
             <img
-              src={searchIcon}
-              alt="botão buscar"
-              srcSet={`${searchIcon2x} 2x`}
+              src={meliLogo}
+              alt="Mercado Livre Brasil - Onde comprar e vender de Tudo"
+              className="logo"
+              srcSet={`${meliLogo2x} 2x`}
             />
-          </button>
-        </form>
+            <form className="search-box">
+              <input
+                type="text"
+                name="keyword"
+                className="search-input"
+                aria-label="Digite o que você quer encontrar"
+                placeholder="Nunca dejes de buscar"
+              />
+              <button type="submit" className="search-button">
+                <img
+                  src={searchIcon}
+                  alt="botão buscar"
+                  srcSet={`${searchIcon2x} 2x`}
+                />
+              </button>
+            </form>
+          </div>
+        </div>
       </header>
     );
   }
