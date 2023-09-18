@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { AVAILABLE_ROUTES } from "./constants/AppModel.ts";
+import { AVAILABLE_ROUTES } from "./constants/AppConstants.ts";
 import ItemDetail from "./pages/item-detail/ItemDetail.tsx";
 
 const SearchResult = React.lazy(

@@ -12,26 +12,3 @@
     gap: 20px;
   }
 }
-
-.search-box {
-  display: flex;
-  align-items: center;
-}
-
-.search-input {
-  width: 100%;
-  border: none;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 2px 0 0 2px;
-}
-
-.search-button {
-  background-color: $gray4_color;
-  border: none;
-  padding: 10px;
-  border-radius: 0 2px 2px 0;
-  line-height: 0;
-  height: 41px;
-  cursor: pointer;
-}
