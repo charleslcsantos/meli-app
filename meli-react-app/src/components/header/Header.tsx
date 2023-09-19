@@ -1,5 +1,5 @@
 import "./Header.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import meliLogo from "../../assets/images/Logo_ML.png";
 import meliLogo2x from "../../assets/images/Logo_ML@2x.png";

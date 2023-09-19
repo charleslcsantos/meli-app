@@ -1,7 +1,7 @@
-import "./SearchForm.scss";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 import searchIcon from "../../assets/images/ic_Search.png";
 import searchIcon2x from "../../assets/images/ic_Search@2x.png";
+import "./SearchForm.scss";
 
 type SearchFormProps = {
   value: string;
@@ -10,10 +10,6 @@ type SearchFormProps = {
 
 export default function SearchForm({ value, onSearch }: SearchFormProps) {
   const [keyword, setKeyword] = useState(value);
-
-  useEffect(() => {
-    // setKeyword(value);
-  });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setKeyword(e.target.value);
@@ -26,20 +22,26 @@ export default function SearchForm({ value, onSearch }: SearchFormProps) {
   };
 
   return (
-    <form className="search-form" onSubmit={handleSubmit}>
+    <form
+      className="search-form"
+      onSubmit={handleSubmit}
+      aria-label="formulário"
+      role="form"
+    >
       <input
         type="text"
         name="keyword"
         value={keyword}
         onChange={handleInputChange}
         className="search-form__input"
-        aria-label="Digite o que você quer encontrar"
+        aria-label="Ingresá lo que quieras encontrar"
         placeholder="Nunca dejes de buscar"
       />
-      <button type="submit" className="search-form__button">
+      <button type="submit" className="search-form__button" role="submit">
         <img
           src={searchIcon}
-          alt="botão buscar"
+          alt="Buscar"
+          aria-label="Buscar"
           srcSet={`${searchIcon2x} 2x`}
         />
       </button>
