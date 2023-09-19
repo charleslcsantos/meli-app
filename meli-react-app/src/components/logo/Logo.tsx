@@ -5,7 +5,7 @@ export default function Logo() {
   return (
     <img
       src={meliLogo}
-      alt="Mercado Livre Brasil - Onde comprar e vender de Tudo"
+      alt="Logotipo Mercado Livre Brasil - Onde comprar e vender de Tudo"
       className="logo"
       srcSet={`${meliLogo} 1x, ${meliLogo2x} 2x`}
     />

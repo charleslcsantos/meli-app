@@ -1,7 +1,6 @@
 import "./ItemDetail.scss";
-import { Component, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import iphoneCover from "../../assets/images/iphone.webp";
 import { Product } from "../../models/Product";
 import { useParams } from "react-router-dom";
 import { ProductService } from "../../services/product";

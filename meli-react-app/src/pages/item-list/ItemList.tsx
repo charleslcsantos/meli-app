@@ -16,6 +16,7 @@ export default function ItemList() {
 
   useEffect(() => {
     getItems();
+    document.title = "Resultados da pesquisa - Seu Site"; // IMPLEMENTAR SEO Component com tags default da pagina
   }, [location.search]);
 
   async function getItems() {
