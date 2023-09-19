@@ -22,8 +22,6 @@ export default function ItemList() {
     if (response) {
       const { items, categories } = response.data;
 
-      console.log(categories);
-
       setItems(items);
       setCategories(categories);
     }

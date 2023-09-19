@@ -1,41 +1,27 @@
-import { Component } from "react";
+import { useEffect, useState } from "react";
 import "./Breadcrumb.scss";
 
 type BreadcrumbProps = {
   categories: string[];
 };
 
-type BreadcrumbState = {
-  categories: string[];
-  showBreadcrumb: boolean;
-};
+export default function Breadcrumb(props: BreadcrumbProps) {
+  const [categories, setCategories] = useState(props.categories);
 
-export default class Breadcrumb extends Component<
-  BreadcrumbProps,
-  BreadcrumbState
-> {
-  constructor(props: BreadcrumbProps) {
-    super(props);
-    console.log(props.categories);
+  useEffect(() => {
+    setCategories(props.categories);
+  }, [props.categories]);
 
-    this.state = {
-      categories: props.categories,
-      showBreadcrumb: this.props.categories.length > 0,
-    };
-  }
-
-  render() {
-    return (
-      <div className="container">
-        <ol className="breadcrumb">
-          {this.state.categories &&
-            this.state.categories.map((category) => (
-              <li className="breadcrumb__item" key={category}>
-                {category}
-              </li>
-            ))}
-        </ol>
-      </div>
-    );
-  }
+  return (
+    <div className="container">
+      <ol className="breadcrumb">
+        {categories &&
+          categories.map((category) => (
+            <li className="breadcrumb__item" key={category}>
+              {category}
+            </li>
+          ))}
+      </ol>
+    </div>
+  );
 }
