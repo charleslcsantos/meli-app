@@ -54,7 +54,9 @@ export function ItemDetail() {
 
   return (
     <>
-      <Breadcrumb categories={[]} />
+      {product && product.categories && (
+        <Breadcrumb categories={product.categories} />
+      )}
       {product && (
         <div className="container">
           <div className="item">

@@ -10,6 +10,7 @@ export interface Product {
   sold_quantity?: number;
   description?: string;
   location?: string;
+  categories?: string[];
 }
 
 export interface ProductPrice {
