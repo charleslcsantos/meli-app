@@ -32,10 +32,16 @@ export default function ItemList() {
       {categories && <Breadcrumb categories={categories} />}
       <div className="container">
         <div className="result">
-          {items &&
+          {items && items.length > 0 ? (
             items.map((item: Product) => (
               <ListItem key={item.id} isShipping item={item} />
-            ))}
+            ))
+          ) : (
+            <div className="empty-box">
+              <span>:/</span>
+              No hay productos con esta palabra.
+            </div>
+          )}
         </div>
       </div>
     </>

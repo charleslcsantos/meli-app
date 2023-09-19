@@ -14,3 +14,15 @@
     }
   }
 }
+
+.empty-box {
+  background-color: $default_white_color;
+  border-radius: 4px;
+  padding: 32px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 50px;
+}
