@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { Product } from "../../models/Product";
 
 type ListItemProps = {
-  isShipping?: boolean;
   item: Product;
 };
 

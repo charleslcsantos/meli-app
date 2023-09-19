@@ -6,17 +6,20 @@ import { Product } from "../../models/Product";
 import { getSearchParamFromUrl } from "../../utils/helpers";
 import Breadcrumb from "../../components/breadcrumb/Breadcrumb";
 import { useLocation } from "react-router-dom";
+import Loader from "../../components/loader/Loader";
 
 export default function ItemList() {
   const location = useLocation();
   const [items, setItems] = useState<Product[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     getItems();
   }, [location.search]);
 
   async function getItems() {
+    setIsLoading(true);
     const keyword = getSearchParamFromUrl();
     const response = await ProductService.search(keyword);
     if (response) {
@@ -25,25 +28,30 @@ export default function ItemList() {
       setItems(items);
       setCategories(categories);
     }
+    setIsLoading(false);
   }
 
   return (
     <>
       {categories && <Breadcrumb categories={categories} />}
-      <div className="container">
-        <div className="result">
-          {items && items.length > 0 ? (
-            items.map((item: Product) => (
-              <ListItem key={item.id} isShipping item={item} />
-            ))
-          ) : (
-            <div className="empty-box">
-              <span>:/</span>
-              No hay productos con esta palabra.
-            </div>
-          )}
+      {isLoading ? (
+        <Loader text="Buscando productos" />
+      ) : (
+        <div className="container">
+          <div className="result">
+            {items && items.length > 0 ? (
+              items.map((item: Product) => (
+                <ListItem key={item.id} item={item} />
+              ))
+            ) : (
+              <div className="empty-box">
+                <span>:/</span>
+                No hay productos con esta palabra.
+              </div>
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

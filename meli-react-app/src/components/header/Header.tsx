@@ -1,12 +1,11 @@
 import "./Header.scss";
 import { useState } from "react";
 
-import meliLogo from "../../assets/images/Logo_ML.png";
-import meliLogo2x from "../../assets/images/Logo_ML@2x.png";
 import { Link, useNavigate } from "react-router-dom";
 import SearchForm from "../search-form/SearchForm";
 import { AVAILABLE_ROUTES } from "../../constants/AppConstants";
 import { getSearchParamFromUrl } from "../../utils/helpers";
+import Logo from "../logo/Logo";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -28,12 +27,7 @@ export default function Header() {
       <div className="container">
         <div className="header__content">
           <Link to="/">
-            <img
-              src={meliLogo}
-              alt="Mercado Livre Brasil - Onde comprar e vender de Tudo"
-              className="logo"
-              srcSet={`${meliLogo2x} 2x`}
-            />
+            <Logo />
           </Link>
           <SearchForm value={keyword} onSearch={onSearchItem} />
         </div>
