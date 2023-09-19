@@ -26,18 +26,16 @@ export default class Breadcrumb extends Component<
 
   render() {
     return (
-      this.state.showBreadcrumb && (
-        <div className="container">
-          <ol className="breadcrumb">
-            {this.state.categories &&
-              this.state.categories.map((category) => (
-                <li className="breadcrumb__item" key={category}>
-                  {category}
-                </li>
-              ))}
-          </ol>
-        </div>
-      )
+      <div className="container">
+        <ol className="breadcrumb">
+          {this.state.categories &&
+            this.state.categories.map((category) => (
+              <li className="breadcrumb__item" key={category}>
+                {category}
+              </li>
+            ))}
+        </ol>
+      </div>
     );
   }
 }

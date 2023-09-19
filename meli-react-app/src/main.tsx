@@ -4,10 +4,12 @@ import App from "./App.tsx";
 import "./index.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AVAILABLE_ROUTES } from "./constants/AppConstants.ts";
-import ItemDetail from "./pages/item-detail/ItemDetail.tsx";
+import Loader from "./components/loader/Loader.tsx";
 
-const SearchResult = React.lazy(
-  () => import("./pages/search-result/SearchResult")
+const SearchResult = React.lazy(() => import("./pages/item-list/ItemList.tsx"));
+
+const ItemDetail = React.lazy(
+  () => import("./pages/item-detail/ItemDetail.tsx")
 );
 
 const router = createBrowserRouter([
@@ -18,7 +20,7 @@ const router = createBrowserRouter([
       {
         path: AVAILABLE_ROUTES.ITEMS,
         element: (
-          <React.Suspense fallback={<>Buscando produto...</>}>
+          <React.Suspense fallback={<Loader text="Buscando productos" />}>
             <SearchResult />
           </React.Suspense>
         ),
@@ -26,7 +28,7 @@ const router = createBrowserRouter([
       {
         path: AVAILABLE_ROUTES.ITEM_DETAIL,
         element: (
-          <React.Suspense fallback={<>Carregando produto...</>}>
+          <React.Suspense fallback={<Loader text="Carregando producto" />}>
             <ItemDetail />
           </React.Suspense>
         ),

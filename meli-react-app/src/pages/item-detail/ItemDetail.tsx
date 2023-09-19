@@ -5,6 +5,7 @@ import iphoneCover from "../../assets/images/iphone.webp";
 import { Product } from "../../models/Product";
 import { useParams } from "react-router-dom";
 import { ProductService } from "../../services/product";
+import Breadcrumb from "../../components/breadcrumb/Breadcrumb";
 
 // type ItemDetailProps = {
 
@@ -53,6 +54,7 @@ export function ItemDetail() {
 
   return (
     <>
+      <Breadcrumb categories={[]} />
       {product && (
         <div className="container">
           <div className="item">
