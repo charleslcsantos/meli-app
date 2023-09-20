@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build --outDir meli-react-app",
+    "build": "tsc && vite build",
     "test": "jest --no-cache",
     "test:coverage": "jest --no-cache --coverage --runInBand",
     "test:ci": "jest --runInBand",
