@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { ListItem } from "./ListItem";
 import { Product } from "../../models/Product";
 import { BrowserRouter } from "react-router-dom";
+import ListItem from "./ListItem";
 
 const mockProduct: Product = {
   id: "123",
