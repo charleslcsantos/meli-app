@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "test": "jest --no-cache",
+    "test": "jest --no-cache --detectOpenHandles --runInBand",
     "test:coverage": "jest --no-cache --coverage --runInBand",
     "test:ci": "jest --runInBand",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
