@@ -4,7 +4,6 @@
 
 
 This project was created using Vite.js (https://vitejs.dev/)
-Preview this app in: https://meli-react-app.netlify.app/
 
 ## Installing / Getting started
 
